@@ -1,0 +1,9 @@
+{
+    "include": [
+        "."
+    ],
+    "typeCheckingMode": "basic",
+    "reportMissingImports": true,
+    "reportMissingTypeStubs": false,
+    "pythonVersion": "3.12"
+}
