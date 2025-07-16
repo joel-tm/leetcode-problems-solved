@@ -1,0 +1,44 @@
+from typing import List
+class Solution:
+
+    def encode(self, strs: List[str]) -> str:
+        res=''
+        for i in strs:
+            #print(i)
+            #a=len(i)
+            res+=str(len(i))+'#'+i
+            #print(res)
+        return res
+        
+
+
+    def decode(self, s: str) -> List[str]:
+        
+        i=0
+        res=[]
+        while i<len(s):
+            j=i
+            while s[j]!='#':
+                
+
+                j+=1
+            
+            length=int(s[i:j])
+
+
+            res.append(s[j+1:j+1+length])
+            # print("firstpass",res)
+            # print("first j",j)
+            # print("length",length)
+            i=j+1+length
+            #print(i)
+        return res
+
+
+
+
+
+            
+
+print(Solution().encode(["HELLO","WORLD"]))
+print(Solution().decode(Solution().encode(["HELLO","WORLD"])))
